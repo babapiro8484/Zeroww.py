@@ -582,10 +582,7 @@ def get_userInfo():
             
         try:
             reqreg = response.json()
-            Your_Data['role'] = reqreg['role']
-            Your_Data['last_login_date'] = reqreg['last_login_date']
-            Your_Data['expire_at'] = reqreg['expire_at']
-            Your_Data['money'] = reqreg['balance']
+            Your_Data['last_login_date'] = reqreg['last_login_data']
             return {"status": True}
         except ValueError:
             return {"status": False, "message": f"Invalid JSON response: {response.text}"}

@@ -386,7 +386,6 @@ def mask_password(password):
 def heder():
          if Your_Data['username']:
             get_userInfo()
-        pySystem.clear()
         print(f"build : {refresh_x()}")
         versi_tampil = disp(generate(f"ZEROW CPM TOOLS{CURRENT_VERSION}"))
         loc_info = f"  Location\t  : {data_jaringan.get('city')}, {data_jaringan.get('region')}, {data_jaringan.get('country')}"

@@ -585,7 +585,8 @@ def get_userInfo():
                 'expire_at': None, 
                 'last_login_date': None, 
             })
-          return {"status": False, "message": "Sesi anda telah berakhir, silakan login kembali"}
+          return ("status": False, "message": "Sesi anda telah berakhir, silakan login kembali")
+        
             
         try:
             reqreg = response.json()

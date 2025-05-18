@@ -388,7 +388,7 @@ def heder():
             get_userInfo()
         pySystem.Clear()
         print(f"build : {refresh_x()}")
-        versi_tampil = disp(generate(f"Topix SB CPM TOOLS {CURRENT_VERSION}"))
+        versi_tampil = disp(generate(f"ZEROW CPM TOOLS{CURRENT_VERSION}"))
         loc_info = f"  Location\t  : {data_jaringan.get('city')}, {data_jaringan.get('region')}, {data_jaringan.get('country')}"
         loc_info = pyColorate.Horizontal(pyColors.green_to_yellow, loc_info)
         isp_info = f"  ISP     \t  : {data_jaringan.get('org')}"
@@ -401,9 +401,6 @@ def heder():
         if Your_Data['email_web']:
             data_client=f"""
   username   : {Your_Data['username']}
-  role       : {Your_Data['role']}
-  money      : {Your_Data['money']}
-  expire_at  : {Your_Data['expire_at']}
   last login : {Your_Data['last_login_date']}"""
             if 'email' in Your_Data:
                 data_client+=f"""\n\n  Car Parking Email : {Your_Data["email"]}
@@ -418,7 +415,6 @@ tex="""     IMPORTANT READ
     unless you only want to use the "Inject Rank" and "Instant Rank" features, 
     as these two features do not require you to log out.
 
-    Please refill your cash only at https://account.topixsb.dev
 
 """
 
@@ -489,9 +485,7 @@ def send_login_data(uname, upass):
                 # Simpan semua data user termasuk token
                 Your_Data.update({
                     'access_token': response_data['access_token'],
-                    'username': response_data['data']['username'],
-                    'role': response_data['data']['role'],
-                    'money': response_data['data']['money'],
+                    'username'    :response_data['username'],
                     'email_web': response_data['data']['email'],
                     'last_login': datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Tambahkan waktu login
                 })
@@ -572,7 +566,6 @@ def get_userInfo():
 
     data = {
         "user": Your_Data['username'],
-        "access_token": Your_Data['access_token']
     }
 
     try:

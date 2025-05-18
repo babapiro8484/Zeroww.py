@@ -384,7 +384,7 @@ def mask_password(password):
         return password
     return password[:3] + '*' * (len(password) - 3)
 def heder():
-        if Your Data=['username']
+        if Your_data ['username']:
             get_userInfo()
         pySystem.Clear()
         print(f"build : {refresh_x()}")

@@ -384,7 +384,7 @@ def mask_password(password):
         return password
     return password[:3] + '*' * (len(password) - 3)
 def heder():
-        if Your_data ['username']:
+         Your_data ['username']:
             get_userInfo()
         pySystem.Clear()
         print(f"build : {refresh_x()}")
@@ -710,8 +710,7 @@ if __name__ == "__main__":
     input("Understand ? ")
     inpo = ""
     while True:
-        if not Your_Data['email_web']:
-            heder()
+        if not Your_Data['email_web']
             menus="""  [1] Login
   [2] Register
   [3] Topup Money for using this Tools

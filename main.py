@@ -707,9 +707,7 @@ Your_Data = {
     'last_login_data' : None,
 }
 req_menu = requests.get(f"{mode_server}/get_menu")
-menu_cpm1 = req_menu.json()
 req_menu = requests.get(f"{mode_server}/get_menu_cpm2")
-menu_cpm2 = req_menu.json()
 
 if __name__ == "__main__":
     input("Understand ? ")

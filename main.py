@@ -386,7 +386,7 @@ def mask_password(password):
 def heder():
          if Your_Data['username']:
             get_userInfo()
-        pySystem.Clear()
+        pySystem.clear()
         print(f"build : {refresh_x()}")
         versi_tampil = disp(generate(f"ZEROW CPM TOOLS{CURRENT_VERSION}"))
         loc_info = f"  Location\t  : {data_jaringan.get('city')}, {data_jaringan.get('region')}, {data_jaringan.get('country')}"
@@ -394,7 +394,7 @@ def heder():
         isp_info = f"  ISP     \t  : {data_jaringan.get('org')}"
         isp_info = pyColorate.Horizontal(pyColors.green_to_yellow, isp_info)
         bannerwz = f"""{c("cyan","=====================================================")}
-  {versi_tampil} {c("cyan","||")} {c("green","https://account.topixsb.dev/")}
+  {versi_tampil} {c("cyan","||")} {c("https://73dffff2-73d0-42d9-905e-fc741e64ac4d-00-2wwr5mungughx.sisko.replit.dev/")}
 {c("cyan","=====================================================")}
 {loc_info}
 {isp_info}"""
